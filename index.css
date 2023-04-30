@@ -40,10 +40,10 @@ input{
     margin-bottom: 25px;
 }
 
-#Calcular{
+.Calcular{
     background-color: black;
 }
-#Calcular:hover{
+.Calcular:hover{
     background-color: #aaa2a2;
 }
 .oculto{
