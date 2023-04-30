@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Trabajo</title>
+</head>
+<body>
+    <h1>Tipo de cargas</h1>  
+    <div class="Contenedor">
+        <div id="Botones" class="column_izquierda">
+            <button id="cp" onclick="cargaPuntual()">Carga puntual</button>
+            <button id="fc">Franja de carga</button>
+            <button id="fct">Franja de carga triangular</button>
+            <button id="cr">Carga rectangular</button>
+            <button id="cc">Carga circular</button>
+            <button id="fctt">Franja de carga tipo terraplen</button>
+        </div>
+        <div id="formulario" class="column_centro">
+            <label id="lbl1" for="t1" class="oculto"></label>
+            <input id="t1" type="text" class="oculto">
+
+            <label id="lbl2" for="t2" class="oculto"></label>
+            <input id="t2" type="text" class="oculto">
+
+            <label id="lbl3" for="t3" class="oculto"></label>
+            <input id="t3" type="text" class="oculto">
+
+            <label id="lbl4" for="t4" class="oculto"></label>
+            <input id="t4" type="text" class="oculto">
+
+            <label id="lbl5" for="t5" class="oculto"></label>
+            <input id="t5" type="text" class="oculto">
+
+            <label id="lbl6" for="t6" class="oculto"></label>
+            <input id="t6" type="text" class="oculto">
+
+            <label id="lbl7" for="t7" class="oculto"></label>
+            <input id="t7" type="text" class="oculto">
+
+            <!--<button id="Calcular" class="oculto">Calcular</button>-->
+        </div>
+        <div class="column_derecha">
+            <label id="lblr" for="respuesta" class="oculto">Respuesta</label>
+            <input id="respuesta" type="text" class="oculto" readonly="true">
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

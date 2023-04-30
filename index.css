@@ -1,0 +1,51 @@
+button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border: none; /* Borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón por encima */
+    border-radius: 5px; /* Borde redondeado */
+    display: block;
+    width: 200px;
+}
+
+button:hover{
+    background-color: #2f6e32; /* Color de fondo */
+}
+
+#Botones button {
+    display: block;
+    margin: 20px;
+}
+.columnas{
+    width: 50px;
+    flex: 0 1 50px;
+    background-color: white;
+    border: solid 1px #1c4051;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.column_izquierda, .column_centro, .column_derecha{
+    width:300px;
+    float:left;
+}
+.column_derecha{
+    margin-top: 100px;
+}
+
+input{
+    display: block;
+    margin-bottom: 25px;
+}
+
+#Calcular{
+    background-color: black;
+}
+#Calcular:hover{
+    background-color: #aaa2a2;
+}
+.oculto{
+    display: none;
+}
