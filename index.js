@@ -1,3 +1,14 @@
+const buttons = document.querySelectorAll('.btn-style');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+  });
+});
+
 function calculoCargaPuntual(){
     let q=document.getElementById("t1").value;
     let z=document.getElementById("t2").value;
@@ -61,5 +72,3 @@ function cargaPuntual(){
 function ocultarTodo(){
     
 }
-
-
