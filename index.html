@@ -8,62 +8,52 @@
     <title>Trabajo</title>
 </head>
 <body>
-    <div class="contenedor">
-
-        <div class="der">
-            <div class="column_derecha">
-                <label id="lblr" for="respuesta" class="oculto label_tex">Resultado</label>
-                <input id="respuesta" type="text" class="oculto input_style" readonly="true">
-            </div>
+    <h1>Tipo de cargas</h1>  
+    <div class="Contenedor">
+        <div id="Botones" class="column_izquierda">
+            <button id="cp" onclick="cargaPuntual()">Carga puntual</button>
+            <button id="fc" onclick=franjaCarga()>Franja de carga</button>
+            <button id="fct" onclick=franjaCargaTriangular()>Franja de carga triangular</button>
+            <button id="cr" onclick=cargaRectangular()>Carga rectangular</button>
+            <button id="cc" onclick=cargaCircular()>Carga circular</button>
+            <button id="fctt" onclick=franjaTerraplen()>Franja de carga tipo terraplen</button>
         </div>
+        <div id="formulario" class="column_centro">
+            <label id="lbl1" for="t1" class="oculto"></label>
+            <input id="t1" type="text" class="oculto">
 
-        <div class="izq">
-            <h1 id="texto">Tipo de cargas</h1>  
-            <div id="Botones" class="column_izquierda">
-                <button class="btn-style" id="cp" onclick="cargaPuntual()">Carga puntual</button>
-                <button class="btn-style" id="fc">Franja de carga</button>
-                <button class="btn-style" id="fct">Franja de carga triangular</button>
-                <button class="btn-style" id="cr">Carga rectangular</button>
-                <button class="btn-style" id="cc">Carga circular</button>                    
-                <button class="btn-style" id="fctt">Franja de carga tipo terraplen</button>
-            </div>
-        </div>
+            <label id="lbl2" for="t2" class="oculto"></label>
+            <input id="t2" type="text" class="oculto">
 
-        <div class="centro">
-            <div id="formulario" class="column_centro">
-                <label  id="lbl1" for="t1" class="oculto label_tex" ></label>
-                <input id="t1" type="text" class="oculto input_style">
-    
-                <label id="lbl2" for="t2" class="oculto label_tex"></label>
-                <input id="t2" type="text" class="oculto input_style">
-    
-                <label id="lbl3" for="t3" class="oculto label_tex"></label>
-                <input id="t3" type="text" class="oculto input_style">
-    
-                <label id="lbl4" for="t4" class="oculto label_tex"></label>
-                <input id="t4" type="text" class="oculto input_style">
-    
-                <label id="lbl5" for="t5" class="oculto label_tex"></label>
-                <input id="t5" type="text" class="oculto input_style">
-    
-                <label id="lbl6" for="t6" class="oculto label_tex"></label>
-                <input id="t6" type="text" class="oculto input_style">
-    
-                <label id="lbl7" for="t7" class="oculto label_tex"></label>
-                <input id="t7" type="text" class="oculto input_style">
-    
-                <button id="Calcular1" class="oculto Calcular" onclick=calculoCargaPuntual()>Calcular</button>
-                <button id="Calcular2" class="oculto Calcular">Calcular</button>
-                <button id="Calcular3" class="oculto Calcular">Calcular</button>
-                <button id="Calcular4" class="oculto Calcular">Calcular</button>
-                <button id="Calcular5" class="oculto Calcular">Calcular</button>
-                <button id="Calcular6" class="oculto Calcular">Calcular</button>
-            </div>
+            <label id="lbl3" for="t3" class="oculto"></label>
+            <input id="t3" type="text" class="oculto">
+
+            <label id="lbl4" for="t4" class="oculto"></label>
+            <input id="t4" type="text" class="oculto">
+
+            <label id="lbl5" for="t5" class="oculto"></label>
+            <input id="t5" type="text" class="oculto">
+
+            <label id="lbl6" for="t6" class="oculto"></label>
+            <input id="t6" type="text" class="oculto">
+
+            <label id="lbl7" for="t7" class="oculto"></label>
+            <input id="t7" type="text" class="oculto">
+
+            <button id="Calcular1" class="oculto Calcular" onclick=calculoCargaPuntual()>Calcular</button>
+            <button id="Calcular2" class="oculto Calcular" onclick=calculoFranjaCarga()>Calcular</button>
+            <button id="Calcular3" class="oculto Calcular" onclick=calculoFranjaCargaTriangular()>Calcular</button>
+            <button id="Calcular4" class="oculto Calcular" onclick=calculoCargaRectangular()>Calcular</button>
+            <button id="Calcular5" class="oculto Calcular" onclick=calculoCargaCircular()>Calcular</button>
+            <button id="Calcular6" class="oculto Calcular" onclick=calculoFranjaTerraplen()>Calcular</button>
         </div>
-        
+        <div class="column_derecha">
+            <label id="lblr" for="respuesta" class="oculto">Respuesta</label>
+            <input id="respuesta" type="text" class="oculto" readonly="true">
+        </div>
     </div>
 
-    
+
     <script src="index.js"></script>
 </body>
 </html>

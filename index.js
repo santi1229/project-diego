@@ -1,14 +1,55 @@
-const buttons = document.querySelectorAll('.btn-style');
+var label1=document.getElementById("lbl1");
+var label2=document.getElementById("lbl2");
+var label3=document.getElementById("lbl3");
+var label4=document.getElementById("lbl4");
+var label5=document.getElementById("lbl5");
+var label6=document.getElementById("lbl6");
+var label7=document.getElementById("lbl7");
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    buttons.forEach(btn => {
-      btn.classList.remove('active');
-    });
-    button.classList.add('active');
-  });
-});
+function mostrarBoton(){
+    //Boton
+    let calcular=document.getElementById("Calcular1");
+    calcular.style.display="block";
+}
 
+function cargaPuntual(){
+    labelsInputs('Digite el valor de la carga (kN):', 'Digite el valor de la profundidad (m):', 'Digite el valor de r (m):');   
+}
+function franjaCarga(){
+    labelsInputs('Digite:', 'Digite:', 'Digite:');
+}
+function franjaCargaTriangular(){
+    labelsInputs('Digite:', 'Digite:', 'Digite:');
+}
+function cargaRectangular(){
+    labelsInputs('Digite:', 'Digite:', 'Digite:');
+}
+function cargaCircular(){
+    labelsInputs('Digite:', 'Digite:', 'Digite:');
+}
+function franjaTerraplen(){
+    labelsInputs('Digite:', 'Digite:', 'Digite:');
+}
+
+function labelsInputs(...values){
+    ocultarTodo();
+    //console.log(values.length);
+    for(let i=1; i<=values.length; i++){
+        document.getElementById("lbl"+i).innerHTML=values[i-1];
+        document.getElementById("lbl"+i).style.display="block";
+        document.getElementById("t"+i).style.display="block";
+    }    
+    mostrarBoton();
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function mostrarRespuesta(respuesta){
+    let lblr=document.getElementById("lblr");
+    lblr.style.display="block";
+
+    let txt=document.getElementById("respuesta");
+    txt.style.display="block"
+    txt.value=respuesta;
+}
 function calculoCargaPuntual(){
     let q=document.getElementById("t1").value;
     let z=document.getElementById("t2").value;
@@ -21,54 +62,43 @@ function calculoCargaPuntual(){
     //console.log(esfuerzo);
     mostrarRespuesta(esfuerzo);
 }
-function mostrarRespuesta(respuesta){
-    let lblr=document.getElementById("lblr");
-    lblr.style.display="block";
-
-    let txt=document.getElementById("respuesta");
-    txt.style.display="block"
-    txt.value=respuesta;
+function calculoFranjaCarga(){
+    temporal();
 }
-
-function cargaPuntual(){
-    // Parametro 1
-    let label1=document.getElementById("lbl1");
-    label1.style.display="block";
-    label1.innerHTML="Digite el valor de la carga (kN): ";
-
-    let input1=document.getElementById("t1")
-    input1.style.display="block"
-
-    // Parametro 2
-    let label2=document.getElementById("lbl2");
-    label2.style.display="block";
-    label2.innerHTML="Digite el valor de la profundidad (m): ";
-
-    let input2=document.getElementById("t2");
-    input2.style.display="block";
-
-    // Parametro 3
-    let label3=document.getElementById("lbl3");
-    label3.style.display="block";
-    label3.innerHTML="Digite el valor de r (m): ";
-
-    let input3=document.getElementById("t3");
-    input3.style.display="block";
-
-    //Boton
-    let calcular=document.getElementById("Calcular1");
-    calcular.style.display="block";
-   
-    /*
-    despues de recibir los datos y hacer la operacion, ocultar todo
-    Se puede ocultar la respuesta apenas se le da al boton para que no quede la respuesta anterior 
-
-    Limpiar los datos del texfield cada vez que se llama
+function calculoFranjaCargaTriangular(){
+    temporal();
+}
+function calculoCargaRectangular(){
+    temporal();
+}
+function calculoCargaCircular(){
+    temporal();
+}
+function calculoFranjaTerraplen(){
+    temporal();
+}
+function temporal(){
+    let q=document.getElementById("t1").value;
+    let z=document.getElementById("t2").value;
+    let r=document.getElementById("t3").value;
+    let p1=parseFloat((q/z**2));
+    let p2=parseFloat(3/parseFloat(2*Math.PI));
+    let p3=parseFloat( (((r/z)**2)+1)**(5/2) );
+    p3=parseFloat(1/p3);
     
-    Como saber cual carga selecciono
-    */
+    esfuerzo=p1*(p2*p3);
+    mostrarRespuesta(esfuerzo);
 }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function ocultarTodo(){
-    
+    for(let i=1; i<=7; i++){
+        document.getElementById("lbl"+i).style.display="none";
+    }
+    for(let i=1; i<=7; i++){
+        document.getElementById("t"+i).style.display="none";
+        document.getElementById("t"+i).value="";
+    }
+        document.getElementById("lblr").style.display="none";
+    document.getElementById("respuesta").style.display="none";
 }
+
