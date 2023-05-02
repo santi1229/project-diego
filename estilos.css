@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor{
+    width: 100%;
+    height: 630px;
+    background-color: red;
+}
+
+.der{
+    margin: 0px;
+    width: 40%;
+    height: 100%;
+    background-color: #69f06d;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.izq{
+    width: 20%;
+    height: 100%;
+    background-color: #4CAF50;
+    float: left;
+    text-align: center;
+    
+}
+
+.centro{
+    padding-left: 5%;
+    width: auto;
+    height: 100%;
+    background-color: #69f06d;
+    /*text-align: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto{
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.btn-style{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.btn-style:hover{
+    width: 100%;
+    border-radius: 0%;
+
+}
+
+.active{
+    width: 100%;
+    background-color: #3d9e42;
+    border-radius: 0%;
+}
+
+.column_izquierda{
+    margin: auto;
+    margin-top: 30px;
+}
+
+/*.column_centro{
+   margin: auto;
+   margin-top: 100px;
+}*/
+
+.column_derecha{
+  margin: auto;
+  /*margin-bottom: 140px;*/
+  margin-left: 160px;
+}
+
+.label_tex{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.input_style{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    /*border-color: #3d9e42;*/
+    /*border-bottom: #00ff0d;*/
+}
+
+
+
+
+/**********************************************************/
+
+button {
+    background-color: #51d356; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border: none; /* Borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón por encima */
+    border-radius: 5px; /* Borde redondeado */
+    display: block;
+}
+
+button:hover{
+    background-color: #3d9e42; /* Color de fondo */
+}
+
+
+#Botones button {
+    display: block;
+    /*margin: 20px;*/
+}
+
+.columnas{
+    width: 50px;
+    flex: 0 1 50px;
+    background-color: white;
+    border: solid 1px #1c4051;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*.column_izquierda, .column_centro, .column_derecha{
+    width: 300px;
+    height:600px;
+    float:left;
+}*/
+/*.column_derecha{
+    margin-top: 100px;
+}*/
+
+input{
+    display: block;
+    margin-bottom: 25px;
+}
+
+.Calcular{
+    width: 50%;
+    background-color: black;
+    margin-left: 85px;
+}
+.Calcular:hover{
+    background-color: #aaa2a2;
+}
+.oculto{
+    display: none;
+}
+
+/******************************************************/
+
